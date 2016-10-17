@@ -1,0 +1,49 @@
+<div data-page="home" class="page" ng-controller="HomeController">
+
+	<!-- Navigation Bar -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="left"></div>
+			<div class="center">{{pageTitle}}</div>
+			<div class="right"></div>
+		</div>
+	</div>
+
+	<!-- Page Contents -->
+	<div class="page-content">
+		<div class="login-screen-title">Enter a username</div>
+
+		<div class="list-block">
+			<ul>
+				<!-- Text inputs -->
+				<li>
+					<div class="item-content">
+						<div class="item-media"><i class="icon icon-form-name"></i></div>
+						<div class="item-inner">
+							<div class="item-title label">Username</div>
+							<div class="item-input">
+								<input ng-model="username" type="text" placeholder="Your name">
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<p><a href="#" class="button" ng-click="login()">Continue</a></p>
+
+		<br /><br />
+		<div class="content-block-title">Current user in chat</div>
+		<div class="list-block">
+			<ul>
+				<li class="item-content" ng-repeat="user in users">
+					<div class="item-inner">
+						<div class="item-title">{{user}}</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+</div>
